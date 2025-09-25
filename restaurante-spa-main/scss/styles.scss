@@ -1,0 +1,35 @@
+$primary-color: #0d6efd;
+$font-stack: Arial, sans-serif;
+
+body {
+  font-family: $font-stack;
+  margin: 0;
+  background: #f8f9fa;
+}
+
+.view {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+h1, h2 {
+  color: $primary-color;
+}
+
+table {
+  background: #fff;
+}
+
+@mixin responsive-title {
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
+}
+
+h1 {
+  @include responsive-title;
+}
+
